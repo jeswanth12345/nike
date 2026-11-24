@@ -1,0 +1,819 @@
+
+/* =====================================
+   1. GENERAL SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+/* =====================================
+   2. HEADER SECTION
+===================================== */
+
+.header {
+    width: 100%;
+    min-height: 80px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -2px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.navbar a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #777777;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-right input {
+    width: 130px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    outline: none;
+}
+
+.shop-link {
+    padding: 10px 20px;
+    background-color: #111111;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   3. BUTTON
+===================================== */
+
+.btn {
+    display: inline-block;
+    background-color: #111111;
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555555;
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   4. HOME HERO SECTION
+===================================== */
+
+
+.hero {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 70px 8%;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.05)
+        ),
+        url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=1800");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-small {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+
+
+.hero-content {
+    max-width: 550px;
+    color: white;
+}
+
+.hero-small {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 75px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.hero-small) {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   5. INTRODUCTION SECTION
+===================================== */
+
+.intro {
+    text-align: center;
+    padding: 65px 10%;
+}
+
+.intro h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.intro p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+}
+
+
+/* =====================================
+   6. CATEGORY SECTION
+===================================== */
+
+.category-section {
+    padding: 40px 5% 70px;
+}
+
+.category-section > h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 30px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: transform 0.3s ease;
+}
+
+.category-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 30%,
+        rgba(0, 0, 0, 0.65)
+    );
+}
+
+.category-card:hover {
+    transform: scale(1.02);
+}
+
+.category-card h3,
+.category-card span {
+    position: relative;
+    z-index: 1;
+}
+
+.category-card h3 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.category-card span {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.clothing-card {
+    background-image: url("https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900");
+}
+
+.shoes-card {
+    background-image: url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900");
+}
+
+.accessories-card {
+    background-image: url("https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900");
+}
+
+
+/* =====================================
+   7. FEATURED PRODUCTS SECTION
+===================================== */
+
+.products-section {
+    padding: 60px 5%;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.section-heading a {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.product-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.product-slider .product-card {
+    min-width: 280px;
+    max-width: 280px;
+    scroll-snap-align: start;
+}
+
+.product-slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.product-slider::-webkit-scrollbar-thumb {
+    background-color: #aaaaaa;
+    border-radius: 10px;
+}
+
+
+/* =====================================
+   8. PRODUCT CARDS
+===================================== */
+
+.product-card {
+    overflow: hidden;
+}
+
+.product-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    background-color: #f2f2f2;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+.product-card h3 {
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.product-card strong {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   9. EXPLORE SPORTS SECTION
+===================================== */
+
+.sports-section {
+    padding: 60px 5%;
+}
+
+.sports-section > h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.sports-card {
+    height: 450px;
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.sports-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 35%,
+        rgba(0, 0, 0, 0.7)
+    );
+}
+
+.sports-card div {
+    position: relative;
+    z-index: 1;
+}
+
+.sports-card h3 {
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.sports-card a {
+    display: inline-block;
+    padding: 10px 22px;
+    border-radius: 25px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.running-card {
+    background-image: url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=900");
+}
+
+.gym-card {
+    background-image: url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=900");
+}
+
+.fitness-card {
+    background-image: url("https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900");
+}
+
+
+/* =====================================
+   10. MORE TO EXPLORE SECTION
+===================================== */
+
+.collection-section {
+    padding: 60px 5%;
+}
+
+.collection-section > h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.collection-grid a {
+    overflow: hidden;
+}
+
+.collection-grid img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.collection-grid a:hover img {
+    transform: scale(1.04);
+}
+
+.collection-grid h3 {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+
+/* =====================================
+   11. ABOUT SECTION
+===================================== */
+
+.about-section {
+    background-color: #f4f4f4;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+}
+
+
+/* =====================================
+   12. PRODUCTS PAGE BANNER
+===================================== */
+
+.products-banner {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.05)
+        ),
+        url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1800");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.products-banner-content {
+    max-width: 600px;
+    color: white;
+}
+
+.products-banner-content > p:first-child {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.products-banner h1 {
+    font-size: 65px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.products-banner-content > p:not(:first-child) {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   13. PRODUCT CATEGORY SECTIONS
+===================================== */
+
+.product-category-section {
+    padding: 55px 5%;
+    scroll-margin-top: 90px;
+}
+
+.product-category-section h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+
+/* =====================================
+   14. FOOTER SECTION
+===================================== */
+
+.footer {
+    background-color: #111111;
+    color: white;
+    padding: 60px 5% 25px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.footer-content h2 {
+    font-size: 35px;
+    font-weight: 900;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.footer-content h3 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.footer-content p {
+    color: #aaaaaa;
+}
+
+.footer-content a {
+    display: block;
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+    color: white;
+}
+
+.copyright {
+    border-top: 1px solid #444444;
+    padding-top: 20px;
+    text-align: center;
+    color: #999999;
+    font-size: 13px;
+}
+
+
+/* =====================================
+   15. RESPONSIVE DESIGN - TABLETS
+===================================== */
+
+@media (max-width: 1000px) {
+
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navbar {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+}
+
+
+/* =====================================
+   16. RESPONSIVE DESIGN - MOBILE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px 4%;
+    }
+
+    .logo {
+        font-size: 27px;
+    }
+
+    .header-right input {
+        width: 100px;
+    }
+
+    .navbar {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 8px;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 50px 6%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-content > p:not(.hero-small) {
+        font-size: 15px;
+    }
+
+    .intro {
+        padding: 45px 6%;
+    }
+
+    .intro h2 {
+        font-size: 25px;
+    }
+
+    .category-grid,
+    .sports-grid,
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card {
+        height: 350px;
+    }
+
+    .sports-card {
+        height: 350px;
+    }
+
+    .collection-grid img {
+        height: 350px;
+    }
+
+    .section-heading h2,
+    .category-section > h2,
+    .sports-section > h2,
+    .collection-section > h2,
+    .product-category-section h2 {
+        font-size: 23px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .product-card img {
+        height: 210px;
+    }
+
+    .product-slider .product-card {
+        min-width: 230px;
+        max-width: 230px;
+    }
+
+    .products-banner {
+        min-height: 430px;
+        padding: 45px 6%;
+    }
+
+    .products-banner h1 {
+        font-size: 45px;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        padding: 55px 6%;
+    }
+
+    .about-section h2 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =====================================
+   17. SMALL MOBILE SCREENS
+===================================== */
+
+@media (max-width: 380px) {
+
+    .header-right input {
+        width: 85px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card img {
+        height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .products-banner h1 {
+        font-size: 38px;
+    }
+
+}
